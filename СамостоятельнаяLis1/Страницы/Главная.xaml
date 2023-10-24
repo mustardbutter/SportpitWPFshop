@@ -10,22 +10,16 @@
 
     <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Width="800" Background="#daf2fb">
         <Grid.RowDefinitions>
-            <RowDefinition Height="37*"/>
-            <RowDefinition Height="283*"/>
-            <RowDefinition Height="0*"/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="146*"/>
-            <ColumnDefinition Width="355*"/>
-            <ColumnDefinition Width="299*"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <TextBox x:Name="login" HorizontalAlignment="Left" Height="22" Margin="176,136,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="162" Background="#7ed2f1" TextChanged="TextBox_TextChanged" Grid.Column="1" Grid.Row="1"/>
-        <Image Margin="200,0,74,211" Source= "/Resources\logo.png" Grid.Column="1" Grid.Row="1" RenderTransformOrigin="0.925,0.531" Cursor="None"/>
-
-        <Frame x:Name="FrmMain" Navigated="MainFrame_OnNavigated" Grid.ColumnSpan="3" Margin="0,0,2,-9" Grid.RowSpan="3"/>
-        <TextBlock Text="Введите имя" Foreground="#FF243238" FontFamily="Candara" Margin="102,138,143,118" Grid.Column="1" Grid.Row="1" RenderTransformOrigin="0.595,0.208"/>
-        <TextBlock x:Name="pass" Text="Введите пароль" Foreground="#FF243238" FontFamily="Candara" Margin="91,183,154,65" Grid.Column="1" Grid.Row="1" RenderTransformOrigin="0.5,0.5">
+        <TextBox x:Name="login" HorizontalAlignment="Center" Height="22" Margin="0,212,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" Background="#7ed2f1" TextChanged="TextBox_TextChanged"/>
+        <Image Margin="336,87,382,282" Source= "/Resources\logo.png" RenderTransformOrigin="0.925,0.531" Cursor="None"/>
+        <TextBlock Text="Введите имя" Foreground="#FF243238" FontFamily="Candara" Margin="234,213,456,216" RenderTransformOrigin="0.595,0.208"/>
+        <TextBlock x:Name="pass" Text="Введите пароль" Foreground="#FF243238" FontFamily="Candara" Margin="234,246,456,178" RenderTransformOrigin="0.5,0.5">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -34,10 +28,10 @@
                     <TranslateTransform/>
                 </TransformGroup>
             </TextBlock.RenderTransform></TextBlock>
-        <PasswordBox x:Name="password" HorizontalAlignment="Left" Height="24" Margin="178,178,0,0" VerticalAlignment="Top" Width="162" Background="#7ed2f1" Grid.Column="1" Grid.Row="1"/>
-        <TextBlock HorizontalAlignment="Center" Margin="119,86,239,0" TextWrapping="Wrap" Text="Магазин спортивного питания
-                   " VerticalAlignment="Top" Height="24" Width="296" FontSize="18" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center" Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="1"/>
-        <Button Content="Войти" HorizontalAlignment="Left" Margin="177,206,0,0" VerticalAlignment="Top" Width="70" Background="#7ef1e2" RenderTransformOrigin="0.587,2.182" Click="BtnLogin" Grid.Column="1" Grid.Row="1" Height="22"/>
-        <Button x:Name="ButtonGuest" Content="Гость" HorizontalAlignment="Left" Margin="270,206,0,0" Width="70" Click="Button_Click" Background="#7ef1e2" Grid.Column="1" Grid.Row="1" Height="22" VerticalAlignment="Top"/>
+        <PasswordBox x:Name="password" HorizontalAlignment="Center" Height="24" Margin="0,245,0,0" VerticalAlignment="Top" Width="160" Background="#7ed2f1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="258,173,0,0" TextWrapping="Wrap" Text="Магазин спортивного питания
+                   " VerticalAlignment="Top" Height="24" Width="296" FontSize="18" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center"/>
+        <Button Content="Войти" HorizontalAlignment="Center" Margin="0,272,0,0" VerticalAlignment="Top" Width="160" Background="#7ef1e2" RenderTransformOrigin="0.587,2.182" Click="BtnLogin" Height="22"/>
+        <Button x:Name="ButtonGuest" Content="Войти как гость" HorizontalAlignment="Center" Margin="0,299,0,0" Width="160" Click="Button_Click" Background="#7ef1e2" Height="22" VerticalAlignment="Top"/>
     </Grid>
 </Page>
