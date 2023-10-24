@@ -1,0 +1,43 @@
+﻿<Page x:Class="СамостоятельнаяLis1.Страницы.Главная"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:СамостоятельнаяLis1.Страницы"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Главная">
+
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Width="800" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="283*"/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="146*"/>
+            <ColumnDefinition Width="355*"/>
+            <ColumnDefinition Width="299*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBox x:Name="login" HorizontalAlignment="Left" Height="22" Margin="176,136,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="162" Background="BlanchedAlmond" TextChanged="TextBox_TextChanged" Grid.Column="1" Grid.Row="1"/>
+        <Image Margin="200,0,74,211" Source= "/Resources\logo.png" Grid.Column="1" Grid.Row="1" RenderTransformOrigin="0.925,0.531" Cursor="None"/>
+
+        <Frame x:Name="FrmMain" Navigated="MainFrame_OnNavigated" Grid.ColumnSpan="3" Margin="0,0,2,-9" Grid.RowSpan="3"/>
+        <TextBlock Text="Введите имя" Foreground="#FF243238" FontFamily="Candara" Margin="102,138,143,118" Grid.Column="1" Grid.Row="1" RenderTransformOrigin="0.595,0.208"/>
+        <TextBlock x:Name="pass" Text="Введите пароль" Foreground="#FF243238" FontFamily="Candara" Margin="91,183,154,65" Grid.Column="1" Grid.Row="1" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-360"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform></TextBlock>
+        <PasswordBox x:Name="password" HorizontalAlignment="Left" Height="24" Margin="178,178,0,0" VerticalAlignment="Top" Width="162" Background="BlanchedAlmond" Grid.Column="1" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Center" Margin="119,86,239,0" TextWrapping="Wrap" Text="Магазин спортивного питания
+                   " VerticalAlignment="Top" Height="24" Width="296" FontSize="18" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center" Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="1"/>
+        <Button Content="Войти" HorizontalAlignment="Left" Margin="177,206,0,0" VerticalAlignment="Top" Width="70" Background="Azure" RenderTransformOrigin="0.587,2.182" Click="BtnLogin" Grid.Column="1" Grid.Row="1" Height="22"/>
+        <Button x:Name="ButtonGuest" Content="Гость" HorizontalAlignment="Left" Margin="270,206,0,0" Width="70" Click="Button_Click" Background="Azure" Grid.Column="1" Grid.Row="1" Height="22" VerticalAlignment="Top"/>
+    </Grid>
+</Page>

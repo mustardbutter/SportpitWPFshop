@@ -1,0 +1,44 @@
+﻿<Page 
+      Background="White" 
+      x:Class="СамостоятельнаяLis1.Страницы.Товары"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:СамостоятельнаяLis1.Страницы"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Товары">
+
+    <Grid>
+        <Rectangle Fill="#FFF12354" Grid.Row="2" StrokeThickness="0"/>
+        <Button x:Name="ButtonBack" Content="На главную" HorizontalAlignment="Stretch" VerticalAlignment="Top" Click="ButtonBack_Click" Height="45"/>
+        <Frame x:Name="MainFrame" Navigated="MainFrame_OnNavigated"/>
+        <Grid>
+            <StackPanel Margin="2,42,1,1">
+                <DataGrid IsReadOnly="True" Name="UserList" Height="auto" AutoGenerateColumns="False" SelectionChanged="UserList_SelectionChanged">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Артикул" Width="1*" Binding="{Binding Артикул}"/>
+                        <DataGridTextColumn Header="Наименование" Width="1*" Binding="{Binding Наименование}"/>
+                        <DataGridTextColumn Header="Единица измерения" Width="1*" Binding="{Binding Единица_измерения}"/>
+                        <DataGridTextColumn Header="Цена" Width="1*" Binding="{Binding Стоимость}"/>
+                        <DataGridTextColumn Header="Максимальная скидка" Width="1*" Binding="{Binding Размер_максимально_возможной_скидки}"/>
+                        <DataGridTextColumn Header="Производитель" Width="1*" Binding="{Binding Производитель}"/>
+                        <DataGridTextColumn Header="Поставщик" Width="1*" Binding="{Binding Поставщик}"/>
+                        <DataGridTextColumn Header="Категория" Width="1*" Binding="{Binding Категория_товара}"/>
+                        <DataGridTextColumn Header="Действующая скидка" Width="1*" Binding="{Binding Действующая_скидка}"/>
+                        <DataGridTextColumn Header="Кол-во на складе" Width="1*" Binding="{Binding Kolvonasklade}"/>
+                        <DataGridTextColumn Header="Описание" Width="1*" Binding="{Binding Описание}"/>
+                        <DataGridTemplateColumn Header="Photo" Width="1*">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Image Source="{Binding Path=Product.Pages}"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>
