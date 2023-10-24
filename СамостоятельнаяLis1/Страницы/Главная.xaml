@@ -8,7 +8,7 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Главная">
 
-    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Width="800" Background="White">
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Width="800" Background="#daf2fb">
         <Grid.RowDefinitions>
             <RowDefinition Height="37*"/>
             <RowDefinition Height="283*"/>
@@ -20,7 +20,7 @@
             <ColumnDefinition Width="299*"/>
         </Grid.ColumnDefinitions>
 
-        <TextBox x:Name="login" HorizontalAlignment="Left" Height="22" Margin="176,136,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="162" Background="BlanchedAlmond" TextChanged="TextBox_TextChanged" Grid.Column="1" Grid.Row="1"/>
+        <TextBox x:Name="login" HorizontalAlignment="Left" Height="22" Margin="176,136,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="162" Background="#7ed2f1" TextChanged="TextBox_TextChanged" Grid.Column="1" Grid.Row="1"/>
         <Image Margin="200,0,74,211" Source= "/Resources\logo.png" Grid.Column="1" Grid.Row="1" RenderTransformOrigin="0.925,0.531" Cursor="None"/>
 
         <Frame x:Name="FrmMain" Navigated="MainFrame_OnNavigated" Grid.ColumnSpan="3" Margin="0,0,2,-9" Grid.RowSpan="3"/>
@@ -34,10 +34,10 @@
                     <TranslateTransform/>
                 </TransformGroup>
             </TextBlock.RenderTransform></TextBlock>
-        <PasswordBox x:Name="password" HorizontalAlignment="Left" Height="24" Margin="178,178,0,0" VerticalAlignment="Top" Width="162" Background="BlanchedAlmond" Grid.Column="1" Grid.Row="1"/>
+        <PasswordBox x:Name="password" HorizontalAlignment="Left" Height="24" Margin="178,178,0,0" VerticalAlignment="Top" Width="162" Background="#7ed2f1" Grid.Column="1" Grid.Row="1"/>
         <TextBlock HorizontalAlignment="Center" Margin="119,86,239,0" TextWrapping="Wrap" Text="Магазин спортивного питания
                    " VerticalAlignment="Top" Height="24" Width="296" FontSize="18" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center" Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="1"/>
-        <Button Content="Войти" HorizontalAlignment="Left" Margin="177,206,0,0" VerticalAlignment="Top" Width="70" Background="Azure" RenderTransformOrigin="0.587,2.182" Click="BtnLogin" Grid.Column="1" Grid.Row="1" Height="22"/>
-        <Button x:Name="ButtonGuest" Content="Гость" HorizontalAlignment="Left" Margin="270,206,0,0" Width="70" Click="Button_Click" Background="Azure" Grid.Column="1" Grid.Row="1" Height="22" VerticalAlignment="Top"/>
+        <Button Content="Войти" HorizontalAlignment="Left" Margin="177,206,0,0" VerticalAlignment="Top" Width="70" Background="#7ef1e2" RenderTransformOrigin="0.587,2.182" Click="BtnLogin" Grid.Column="1" Grid.Row="1" Height="22"/>
+        <Button x:Name="ButtonGuest" Content="Гость" HorizontalAlignment="Left" Margin="270,206,0,0" Width="70" Click="Button_Click" Background="#7ef1e2" Grid.Column="1" Grid.Row="1" Height="22" VerticalAlignment="Top"/>
     </Grid>
 </Page>
