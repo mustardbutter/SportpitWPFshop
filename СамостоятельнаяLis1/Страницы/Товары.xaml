@@ -11,7 +11,7 @@
       Title="Товары">
 
     <Grid>
-        <Rectangle Fill="#FFF12354" Grid.Row="2" StrokeThickness="0"/>
+        <Rectangle Fill="#daf2fb" Grid.Row="2" StrokeThickness="0"/>
         <Button x:Name="ButtonBack" Content="На главную" HorizontalAlignment="Stretch" VerticalAlignment="Top" Click="ButtonBack_Click" Height="45"/>
         <Frame x:Name="MainFrame" Navigated="MainFrame_OnNavigated"/>
         <Grid>
