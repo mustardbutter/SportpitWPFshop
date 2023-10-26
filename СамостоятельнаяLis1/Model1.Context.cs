@@ -26,15 +26,7 @@ namespace СамостоятельнаяLis1
         {
             throw new UnintentionalCodeFirstException();
         }
-
-        public static art_prak1Entities4 _context;
-        public static art_prak1Entities4 GetContext()
-        {
-            if (_context == null)
-                _context = new art_prak1Entities4();
-            return _context;
-        }
-
+    
         public virtual DbSet<Items> Items { get; set; }
         public virtual DbSet<Role> Role { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }

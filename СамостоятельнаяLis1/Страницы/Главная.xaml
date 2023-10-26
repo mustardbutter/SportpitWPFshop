@@ -17,7 +17,7 @@
         </Grid.ColumnDefinitions>
 
         <TextBox x:Name="login" HorizontalAlignment="Center" Height="22" Margin="0,212,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" Background="#7ed2f1" TextChanged="TextBox_TextChanged"/>
-        <Image Margin="336,87,382,282" Source= "/Resources\logo.png" RenderTransformOrigin="0.925,0.531" Cursor="None"/>
+        <Image Margin="293,15,293,238" Source= "/Страницы/logo.png" RenderTransformOrigin="0.925,0.531" Cursor="None"/>
         <TextBlock Text="Введите имя" Foreground="#FF243238" FontFamily="Candara" Margin="234,213,456,216" RenderTransformOrigin="0.595,0.208"/>
         <TextBlock x:Name="pass" Text="Введите пароль" Foreground="#FF243238" FontFamily="Candara" Margin="234,246,456,178" RenderTransformOrigin="0.5,0.5">
             <TextBlock.RenderTransform>

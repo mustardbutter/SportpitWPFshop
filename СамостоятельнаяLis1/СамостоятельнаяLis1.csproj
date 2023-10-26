@@ -184,6 +184,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Resource Include="Страницы\logo.png" />
     <None Include="Resources\icon.ico" />
     <None Include="Resources\logo.png" />
   </ItemGroup>
