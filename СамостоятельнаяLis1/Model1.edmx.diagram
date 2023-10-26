@@ -6,12 +6,12 @@
     <edmx:Diagrams>
       <Diagram DiagramId="6cf9b52472ef421895148ed6911b6963" Name="Diagram1">
         <EntityTypeShape EntityType="art_prak1Model.Items" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="art_prak1Model.Role" Width="1.5" PointX="0.875" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="art_prak1Model.Role" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="art_prak1Model.sysdiagrams" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="art_prak1Model.User" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
         <EntityTypeShape EntityType="art_prak1Model.Zakazi" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="art_prak1Model.Zakazi2" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="art_prak1Model.pynkt_vidachi" Width="1.5" PointX="7" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="art_prak1Model.pynkt_vidachi" Width="1.5" PointX="6.75" PointY="4.75" IsExpanded="true" />
         <AssociationConnector Association="art_prak1Model.FK_User_Role" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
