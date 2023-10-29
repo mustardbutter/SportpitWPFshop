@@ -6,8 +6,4 @@ using System.Threading.Tasks;
 
 namespace СамостоятельнаяLis1
 {
-    class AppConnect
-    {
-        public static art_prak1Entities4 model1;
-    }
 }

@@ -7,38 +7,32 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:СамостоятельнаяLis1.Страницы"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="500" d:DesignWidth="890"
       Title="Товары">
 
     <Grid>
         <Rectangle Fill="#daf2fb" Grid.Row="2" StrokeThickness="0"/>
-        <Button x:Name="ButtonBack" Content="На главную" HorizontalAlignment="Stretch" VerticalAlignment="Top" Click="ButtonBack_Click" Height="45"/>
+        <Button x:Name="ButtonBack" FontFamily="Comic Sans MS" HorizontalAlignment="Left" VerticalAlignment="Top" Click="ButtonBack_Click" Height="45" Width="46" Cursor="AppStarting">
+            <Button.Background>
+                <ImageBrush ImageSource="/Страницы/logo.png"/>
+            </Button.Background>
+            <Button.Effect>
+                <DropShadowEffect Color="#FF416082" RenderingBias="Quality" Opacity="0.95" BlurRadius="20"/>
+            </Button.Effect>
+        </Button>
         <Frame x:Name="MainFrame" Navigated="MainFrame_OnNavigated"/>
         <Grid>
-            <StackPanel Margin="2,42,1,1">
-                <DataGrid IsReadOnly="True" Name="UserList" Height="auto" AutoGenerateColumns="False" SelectionChanged="UserList_SelectionChanged">
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header="Артикул" Width="1*" Binding="{Binding Артикул}"/>
-                        <DataGridTextColumn Header="Наименование" Width="1*" Binding="{Binding Наименование}"/>
-                        <DataGridTextColumn Header="Единица измерения" Width="1*" Binding="{Binding Единица_измерения}"/>
-                        <DataGridTextColumn Header="Цена" Width="1*" Binding="{Binding Стоимость}"/>
-                        <DataGridTextColumn Header="Максимальная скидка" Width="1*" Binding="{Binding Размер_максимально_возможной_скидки}"/>
-                        <DataGridTextColumn Header="Производитель" Width="1*" Binding="{Binding Производитель}"/>
-                        <DataGridTextColumn Header="Поставщик" Width="1*" Binding="{Binding Поставщик}"/>
-                        <DataGridTextColumn Header="Категория" Width="1*" Binding="{Binding Категория_товара}"/>
-                        <DataGridTextColumn Header="Действующая скидка" Width="1*" Binding="{Binding Действующая_скидка}"/>
-                        <DataGridTextColumn Header="Кол-во на складе" Width="1*" Binding="{Binding Kolvonasklade}"/>
-                        <DataGridTextColumn Header="Описание" Width="1*" Binding="{Binding Описание}"/>
-                        <DataGridTemplateColumn Header="Photo" Width="1*">
-                            <DataGridTemplateColumn.CellTemplate>
-                                <DataTemplate>
-                                    <Image Source="{Binding Path=Product.Pages}"/>
-                                </DataTemplate>
-                            </DataGridTemplateColumn.CellTemplate>
-                        </DataGridTemplateColumn>
-                    </DataGrid.Columns>
-                </DataGrid>
-            </StackPanel>
+            <StackPanel Margin="2,42,1,1"/>
         </Grid>
+        <TabControl Margin="0,45,0,0">
+            <TabItem Header="Товары" Background="#91b8b0">
+                <Grid Background="#ddfcf7">
+                    <Menu Margin="0,0,696,0"/>
+                    <Image HorizontalAlignment="Left" Height="159" Margin="707,10,0,0" VerticalAlignment="Top" Width="164"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <TextBox x:Name="Search" HorizontalAlignment="Right" Margin="0,45,0,0" TextWrapping="Wrap" Text="Поиск" VerticalAlignment="Top" Width="267" Height="22"/>
+        <ComboBox x:Name="Sorting" HorizontalAlignment="Center" Margin="0,1,0,0" Width="239" VerticalAlignment="Top" Cursor="Hand" Text="Сортировка"/>
     </Grid>
 </Page>

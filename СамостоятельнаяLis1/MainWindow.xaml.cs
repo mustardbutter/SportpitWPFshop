@@ -24,7 +24,6 @@ namespace СамостоятельнаяLis1
         public MainWindow()
         {
             InitializeComponent();
-            AppConnect.model1 = new art_prak1Entities4();
             AppFrame.frameMain = FrmMain;
             FrmMain.Navigate(new Главная());
         }

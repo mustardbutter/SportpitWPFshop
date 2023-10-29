@@ -38,40 +38,8 @@ namespace СамостоятельнаяLis1.Страницы
 
         private void BtnLogin(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                var userObj = AppConnect.model1.User.FirstOrDefault(x => x.Login == login.Text && x.Password == password.Password);
-                if (userObj == null)
-                {
-                    MessageBox.Show("Такого пользователя нет!", "Ошибка при авторизации!",
-                        MessageBoxButton.OK, MessageBoxImage.Error);
-                }
-                else
-                {
-                    switch (userObj.IDRole)
-                    {
-                        case 1:
-                            MessageBox.Show("Здравствуйте Администатор " + userObj.Name + "!",
-                         "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
-                            NavigationService.Navigate(new Товары());
-                            break;
-
-                        case 2:
-                            MessageBox.Show("Здравствуйте Ученик " + userObj.Name + "!",
-                     "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
-                            NavigationService.Navigate(new Товары());
-                            break;
-                        default:
-                            MessageBox.Show("Данные не обнаружены!", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Warning);
-                            break;
-                    }
-                }
-            }
-            catch (Exception Ex)
-            {
-                MessageBox.Show("Ошибка " + Ex.Message.ToString() + "Критическая работа приложения!",
+                MessageBox.Show("Ошибка " + "отсутствует база данных",
                     "Уведомление", MessageBoxButton.OK, MessageBoxImage.Warning);
-            }
         }
 
         private void MainFrame_OnNavigated(object sender, NavigationEventArgs e)

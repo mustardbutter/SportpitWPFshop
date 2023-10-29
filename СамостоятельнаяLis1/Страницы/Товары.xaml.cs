@@ -23,7 +23,6 @@ namespace СамостоятельнаяLis1.Страницы
         public Товары()
         {
             InitializeComponent();
-            UserList.ItemsSource = art_prak1Entities4.GetContext().Items.ToList();
         }
 
         private void ButtonBack_Click(object sender, RoutedEventArgs e)
@@ -44,11 +43,6 @@ namespace СамостоятельнаяLis1.Страницы
             {
                 ButtonBack.Visibility = Visibility.Visible;
             }
-        }
-
-        private void UserList_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
         }
     }
 }
