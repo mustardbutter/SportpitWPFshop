@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -12,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MySql.Data.MySqlClient;
 
 namespace СамостоятельнаяLis1.Страницы
 {
@@ -20,6 +23,7 @@ namespace СамостоятельнаяLis1.Страницы
     /// </summary>
     public partial class Товары : Page
     {
+        Boolean expanded = false;
         public Товары()
         {
             InitializeComponent();
@@ -30,19 +34,76 @@ namespace СамостоятельнаяLis1.Страницы
             NavigationService.Navigate(new Главная());
         }
 
-        private void MainFrame_OnNavigated(object sender, NavigationEventArgs e)
+        private void Things_Initialized(object sender, EventArgs e)
         {
-            if (!(e.Content is Page page)) return;
-            this.Title = $"LESSON - {page.Title}";
+            string connstring = "server=sql11.freemysqlhosting.net;uid=sql11657487;pwd=RhX6XSrzN5;database=sql11657487";
+            MySqlConnection connect = new MySqlConnection(connstring);
+            connect.Open();
+            string sql = "SELECT Id, NameItem From Items";
+            MySqlCommand cmd = new MySqlCommand(sql, connect);
+            MySqlDataReader reader= cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                Things.Items.Add(reader.GetString(0) + " " + reader.GetString(1));
+            }
+            connect.Close();
+            Console.WriteLine("Done.");
+        }
 
-            if (page is Главная)
+        private void ImageOfThing_MouseEnter(object sender, MouseEventArgs e)
+        {
+            switch (expanded)
             {
-                ButtonBack.Visibility = Visibility.Hidden;
+                case true: ImageOfThing.Width = 220; ImageOfThing.Height = 220;
+                    expanded = false;
+                    break;
+                    case false:
+                           ImageOfThing.Width = 160; ImageOfThing.Height = 160;
+                    expanded = true;
+                    break;
+                default:
+                           ImageOfThing.Width = 160; ImageOfThing.Height = 160;
+                    break;
             }
-            else
+            Thread.Sleep(100);
+
+        }
+
+
+        private void Things_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ListBox listbox = (ListBox)sender;
+
+            string nameval = Regex.Replace(listbox.SelectedItem.ToString(), "[1-9, 0]", "");
+            ThingName.Content = nameval;
+
+            string value = Regex.Replace(listbox.SelectedItem.ToString(), "[А-Яа-я]", "");
+            int IDS = Int32.Parse(value);
+
+            try
             {
-                ButtonBack.Visibility = Visibility.Visible;
+                String Descr = "\"" + listbox.SelectedItems.ToString() + "\"";
+
+                string connstring = "server=sql11.freemysqlhosting.net;uid=sql11657487;pwd=RhX6XSrzN5;database=sql11657487";
+                MySqlConnection connect = new MySqlConnection(connstring);
+                connect.Open();
+                string sql = "SELECT * FROM Items where Id='" + IDS +"'";
+                MySqlCommand cmd = new MySqlCommand(sql, connect);
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+                
+                while (reader.Read())
+                {
+                    ThingDescription.Text = ((string)reader["Description"]);
+                    Coun.Content = ((int)reader["CountItem"]);
+                    Provider.Content = ((string)reader["Provider"]);
+                }
+
+                connect.Close();
+                Console.WriteLine("ConnectionClosed");
+
             }
+            catch(MySqlException ex) { MessageBox.Show("Error " + ex.ToString());  }
         }
     }
 }

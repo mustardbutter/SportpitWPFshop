@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:СамостоятельнаяLis1"
         mc:Ignorable="d"
-        Title="Главная" Height="450" Width="800" Icon="/icon.ico">
+        Title="Главная" Height="600" Width="870" Icon="/icon.ico">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="37*"/>

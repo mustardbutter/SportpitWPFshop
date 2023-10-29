@@ -5,9 +5,8 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:СамостоятельнаяLis1.Страницы"
       mc:Ignorable="d" 
-      d:DesignHeight="500" d:DesignWidth="890"
+      d:DesignHeight="700" d:DesignWidth="900"
       Title="Товары">
 
     <Grid>
@@ -20,19 +19,21 @@
                 <DropShadowEffect Color="#FF416082" RenderingBias="Quality" Opacity="0.95" BlurRadius="20"/>
             </Button.Effect>
         </Button>
-        <Frame x:Name="MainFrame" Navigated="MainFrame_OnNavigated"/>
-        <Grid>
-            <StackPanel Margin="2,42,1,1"/>
-        </Grid>
         <TabControl Margin="0,45,0,0">
             <TabItem Header="Товары" Background="#91b8b0">
                 <Grid Background="#ddfcf7">
-                    <Menu Margin="0,0,696,0"/>
-                    <Image HorizontalAlignment="Left" Height="159" Margin="707,10,0,0" VerticalAlignment="Top" Width="164"/>
+
+                    <Label x:Name="Provider" Content="Производитель" HorizontalAlignment="Right" Height="33" Margin="686,305,0,0" VerticalAlignment="Top" Width="159" FontFamily="Times New Roman" FontSize="18"/>
+                    <TextBlock x:Name="ThingDescription" TextWrapping="Wrap" Text="Описание" Margin="238,76,284,33" FontFamily="Times New Roman" FontSize="20"/>
+
+                    <Label x:Name="ThingName" Content="Название товара" HorizontalAlignment="Left" Margin="229,13,0,0" VerticalAlignment="Top" Height="63" Width="390" FontSize="36" FontFamily="Times New Roman"/>
+                    <Label Content="Остаток на складе:" HorizontalAlignment="Right" Height="28" Margin="0,277,49,0" VerticalAlignment="Top" Width="159" FontFamily="Times New Roman" FontSize="18"/>
+                    <Image x:Name="ImageOfThing" HorizontalAlignment="Right" Height="160" Margin="0,17,10,251" Width="160" Source="/Страницы/logo.png" MouseEnter="ImageOfThing_MouseEnter"/>
+                    <Label x:Name="Coun" Content="0" HorizontalAlignment="Right" Height="28" Margin="0,277,10,0" VerticalAlignment="Top" Width="51" FontFamily="Times New Roman" FontSize="18"/>
+                    <ListBox x:Name="Things" d:ItemsSource="{d:SampleData ItemCount=20}" Margin="0,3,617,0" Initialized="Things_Initialized" SelectionChanged="Things_SelectionChanged"/>
                 </Grid>
             </TabItem>
         </TabControl>
-        <TextBox x:Name="Search" HorizontalAlignment="Right" Margin="0,45,0,0" TextWrapping="Wrap" Text="Поиск" VerticalAlignment="Top" Width="267" Height="22"/>
-        <ComboBox x:Name="Sorting" HorizontalAlignment="Center" Margin="0,1,0,0" Width="239" VerticalAlignment="Top" Cursor="Hand" Text="Сортировка"/>
+        <Label Content="Вы вошли как гость" HorizontalAlignment="Right" Height="30" Margin="0,5,0,0" VerticalAlignment="Top" Width="134"/>
     </Grid>
 </Page>

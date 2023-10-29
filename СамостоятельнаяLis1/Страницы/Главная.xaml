@@ -9,7 +9,7 @@
       Title="Главная">
 
     <Grid Height="600" Width="auto" Background="#daf2fb">
-        <TextBox x:Name="login" HorizontalAlignment="Center" Height="22" Margin="20,235,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" Background="#7ed2f1" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="login" HorizontalAlignment="Center" Height="22" Margin="20,235,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" Background="#7ed2f1"/>
         <Image Height="150" Width="150" Margin="290,-140,292,243" Source= "/Страницы/logo.png" RenderTransformOrigin="0.925,0.531" >
             <Image.Effect>
                 <DropShadowEffect/>
@@ -17,10 +17,10 @@
         </Image>
         <TextBlock Text="Введите имя:" Foreground="Black" FontFamily="Comic Sans MS" Margin="234,235,456,193"/>
         <TextBlock x:Name="pass" Text="Введите пароль:" Foreground="Black" FontFamily="Comic Sans MS" Margin="218,265,456,161"></TextBlock>
-        <PasswordBox x:Name="password" HorizontalAlignment="Center" Height="24" Margin="20,265,0,0" VerticalAlignment="Top" Width="160" Background="#7ed2f1"/>
         <TextBlock HorizontalAlignment="Center" Margin="258,190,250,0" FontFamily="Comic Sans MS" TextWrapping="Wrap" Text="Магазин спортивной экипировки"
         VerticalAlignment="Top" Height="24" Width="296" FontSize="18" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center"/>
         <Button x:Name="ButtonAutorization" Content="Авторизоваться" HorizontalAlignment="Center" Margin="20,300,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS" Width="160" Background="#7ef1e2" RenderTransformOrigin="0.587,2.182" Click="BtnLogin" Height="22"/>
         <Button x:Name="ButtonGuest" Content="Войти как гость" HorizontalAlignment="Center" Margin="20,330,0,0" Width="160" Click="Button_Click" FontFamily="Comic Sans MS" Background="#7ef1e2" Height="22" VerticalAlignment="Top"/>
+        <TextBox x:Name="password" HorizontalAlignment="Center" Height="22" Margin="20,265,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" Background="#7ed2f1"/>
     </Grid>
 </Page>

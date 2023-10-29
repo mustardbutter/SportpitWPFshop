@@ -107,14 +107,8 @@
     <Reference Include="MySql.Data, Version=8.2.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.8.2.0\lib\net462\MySql.Data.dll</HintPath>
     </Reference>
-    <Reference Include="MySql.Data.EntityFrameworkCore, Version=8.0.22.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <HintPath>..\packages\MySql.Data.EntityFrameworkCore.8.0.22\lib\netstandard2.0\MySql.Data.EntityFrameworkCore.dll</HintPath>
-    </Reference>
     <Reference Include="MySqlConnector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d33d3e53aa5f8c92, processorArchitecture=MSIL">
       <HintPath>..\packages\MySqlConnector.2.2.7\lib\net471\MySqlConnector.dll</HintPath>
-    </Reference>
-    <Reference Include="SqlTools, Version=1.6.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SqlTools.1.6.2\lib\net45\SqlTools.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -179,7 +173,6 @@
     </ApplicationDefinition>
     <Compile Include="AppConnect.cs" />
     <Compile Include="AppFrame.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="Страницы\Главная.xaml.cs">
       <DependentUpon>Главная.xaml</DependentUpon>
     </Compile>
@@ -244,6 +237,36 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G403T5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G598Y6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\А112Т4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\B538G6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D648N7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D830R5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E324U7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F735B6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F746E6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F937G4.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
