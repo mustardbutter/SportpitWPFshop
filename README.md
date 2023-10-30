@@ -1,2 +1,3 @@
 # SportpitWPFshop
-JKLSGMNKSKL;GKP'SRGNKAFIAWEHRGN
+
+The app maded for sql database connection training 
