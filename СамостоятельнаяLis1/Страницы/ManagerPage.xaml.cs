@@ -19,12 +19,12 @@ using MySql.Data.MySqlClient;
 namespace СамостоятельнаяLis1.Страницы
 {
     /// <summary>
-    /// Логика взаимодействия для Товары.xaml
+    /// Логика взаимодействия для ManagerPage.xaml
     /// </summary>
-    public partial class Товары : Page
+    public partial class ManagerPage : Page
     {
         Boolean expanded = false;
-        public Товары()
+        public ManagerPage()
         {
             InitializeComponent();
         }
@@ -41,7 +41,7 @@ namespace СамостоятельнаяLis1.Страницы
             connect.Open();
             string sql = "SELECT Id, NameItem From Items";
             MySqlCommand cmd = new MySqlCommand(sql, connect);
-            MySqlDataReader reader= cmd.ExecuteReader();
+            MySqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
                 Things.Items.Add(reader.GetString(0) + " " + reader.GetString(1));
@@ -54,15 +54,16 @@ namespace СамостоятельнаяLis1.Страницы
         {
             switch (expanded)
             {
-                case true: ImageOfThing.Width = 220; ImageOfThing.Height = 220;
+                case true:
+                    ImageOfThing.Width = 220; ImageOfThing.Height = 220;
                     expanded = false;
                     break;
-                    case false:
-                           ImageOfThing.Width = 160; ImageOfThing.Height = 160;
+                case false:
+                    ImageOfThing.Width = 160; ImageOfThing.Height = 160;
                     expanded = true;
                     break;
                 default:
-                           ImageOfThing.Width = 160; ImageOfThing.Height = 160;
+                    ImageOfThing.Width = 160; ImageOfThing.Height = 160;
                     break;
             }
             Thread.Sleep(100);
@@ -87,13 +88,10 @@ namespace СамостоятельнаяLis1.Страницы
                 string connstring = "server=sql11.freemysqlhosting.net;uid=sql11657487;pwd=RhX6XSrzN5;database=sql11657487";
                 MySqlConnection connect = new MySqlConnection(connstring);
                 connect.Open();
-                string sql = "SELECT * FROM Items where Id='" + IDS +"'";
+                string sql = "SELECT * FROM Items where Id='" + IDS + "'";
                 MySqlCommand cmd = new MySqlCommand(sql, connect);
 
                 MySqlDataReader reader = cmd.ExecuteReader();
-
-                
-
 
                 while (reader.Read())
                 {
@@ -101,14 +99,13 @@ namespace СамостоятельнаяLis1.Страницы
                     Coun.Content = ((int)reader["CountItem"]);
                     Provider.Content = ((string)reader["Provider"]);
                     Price.Content = ((int)reader["Price"]);
-
                 }
 
                 connect.Close();
                 Console.WriteLine("ConnectionClosed");
 
             }
-            catch(MySqlException ex) { MessageBox.Show("Error " + ex.ToString());  }
+            catch (MySqlException ex) { MessageBox.Show("Error " + ex.ToString()); }
         }
     }
 }

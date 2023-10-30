@@ -173,6 +173,15 @@
     </ApplicationDefinition>
     <Compile Include="AppConnect.cs" />
     <Compile Include="AppFrame.cs" />
+    <Compile Include="Страницы\AdminPage.xaml.cs">
+      <DependentUpon>AdminPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Страницы\ManagerPage.xaml.cs">
+      <DependentUpon>ManagerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Страницы\UserPage.xaml.cs">
+      <DependentUpon>UserPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Страницы\Главная.xaml.cs">
       <DependentUpon>Главная.xaml</DependentUpon>
     </Compile>
@@ -191,6 +200,18 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Страницы\AdminPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Страницы\ManagerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Страницы\UserPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Страницы\Главная.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

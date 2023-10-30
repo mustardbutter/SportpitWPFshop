@@ -80,8 +80,16 @@ namespace СамостоятельнаяLis1.Страницы
                 {
                     MessageBox.Show("Такого пользователя не существует");
                 }
-                else { 
-                    
+                else if(roleid == 1) {
+                    NavigationService.Navigate(new AdminPage());
+                }
+                else if (roleid == 2)
+                {
+                    NavigationService.Navigate(new ManagerPage());
+                }
+                else if (roleid == 3)
+                {
+                    NavigationService.Navigate(new UserPage());
                 }
 
                 connect.Close();
@@ -92,9 +100,3 @@ namespace СамостоятельнаяLis1.Страницы
         }
     }
 }
-
-
-    public class xTextBox : TextBox
-    {
-    }
-
